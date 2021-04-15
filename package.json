@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng deploy --base-href=/aure-when-what/ --dir=dist/when-what-in-azure"
+    "deploy": "ng deploy --base-href=/aure-when-what/"
   },
   "private": true,
   "dependencies": {
