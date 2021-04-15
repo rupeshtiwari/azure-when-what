@@ -6,4 +6,5 @@ export interface AzureService {
   image: string;
   description: string;
   tags: string[];
+  content: string;
 }
