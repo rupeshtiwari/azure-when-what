@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "when-what-in-azure"
+  "defaultProject": "when-what-in-azure",
+  "cli": {
+    "analytics": false
+  }
 }
