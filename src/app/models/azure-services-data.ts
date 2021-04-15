@@ -10,7 +10,7 @@ export const AzureServices = [
         description: 'multiple sender and single receiver',
         tags: ['Command'],
         content:
-          'Use this if you need simple queueing mechanism. Sender and receiver are decuoupled. Each mesage is processed by one receiver only. However, many sender can put the message on queue. Message must be string. The Maximum size of message 64KB. Azure Storage will provide the transaction logs for each message. All of the Azure Storage features will be available here.',
+          'Use this if you need simple queueing mechanism. Sender and receiver are decoupled. Each message is processed by one receiver only. However, many sender can put the message on queue. Message must be string. The Maximum size of message 64KB. Azure Storage will provide the transaction logs for each message. All of the Azure Storage features will be available here.',
       },
       {
         title: 'Azure Service Bus Queues',
