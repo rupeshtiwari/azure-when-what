@@ -5,27 +5,27 @@ export const AzureServices = [
     icon: 'event',
     services: [
       {
-        title: 'Storage Queues',
+        title: 'Azure Storage Queues',
         image: 'https://imgur.com/sugyXgH.png',
         description: 'multiple sender and single receiver',
         tags: ['Command'],
-        content:''
+        content: 'Use this if you need simple queueing mechanism. Sender and receiver are decuoupled. Each mesage is processed by one receiver only. However, many sender can put the message on queue. Message must be string. The Maximum size of message 64KB. Azure Storage will provide the transaction logs for each message. All of the Azure Storage features will be available here.',
       },
       {
-        title: 'Service Bus Queues',
+        title: 'Azure Service Bus Queues',
         image: 'https://imgur.com/Zy7AlUJ.png',
         description:
           'multiple sender and single receiver, order is guarrenty, de-duplicate of messages taken care',
         tags: ['Command'],
       },
       {
-        title: 'Service Bus Topics',
+        title: 'Azure Service Bus Topics',
         image: 'https://imgur.com/dgA2sa6.png',
         description: 'multiple sender and multiple receiver',
         tags: ['Command'],
       },
       {
-        title: 'Event Grid',
+        title: 'Azure Event Grid',
         image: 'https://imgur.com/4Bjtt2P.png',
         description:
           'subscribe to an event and push that event as message to other systems',

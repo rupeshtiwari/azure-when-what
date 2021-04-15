@@ -3,9 +3,9 @@
   <img src="{{ data.image }}" alt="Azure Service image">
 </div>
 <div mat-dialog-content>
-  <p>{{data.description }}
-    <mat-chip-list class="mat-chip-list-stacked" aria-label="Color selection">
-      <mat-chip *ngFor="let chip of data.tags" color="accent">
+  <p>{{data.content }}
+    <mat-chip-list aria-label="Color selection">
+      <mat-chip *ngFor="let chip of data.tags" color="accent" class="chip">
         {{chip}}
       </mat-chip>
     </mat-chip-list>
