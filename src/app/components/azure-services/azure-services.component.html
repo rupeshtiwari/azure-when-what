@@ -14,7 +14,7 @@
       </mat-panel-description>
     </mat-expansion-panel-header>
     <mat-list role="list">
-      <mat-list-item role="listitem" *ngFor="let service of panel.services" class="example-mat-list-item">
+      <mat-list-item role="listitem" *ngFor="let service of panel.services">
         <div mat-line>
           <a (click)="openDialog(service)">
             <img src="{{ service.image }}" class="example-item-image" />
