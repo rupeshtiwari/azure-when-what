@@ -3,56 +3,25 @@
   <button mat-button (click)="accordion.closeAll()">Collapse All</button>
 </div>
 <mat-accordion class="example-headers-align" multi>
-  <mat-expansion-panel>
+  <mat-expansion-panel *ngFor="let panel of panels">
     <mat-expansion-panel-header>
       <mat-panel-title>
-        Events
+        {{ panel.title }}
       </mat-panel-title>
       <mat-panel-description>
-        Azure services for Event supports
-        <mat-icon>event</mat-icon>
+        {{ panel.description }}
+        <mat-icon>{{ panel.icon }}</mat-icon>
       </mat-panel-description>
     </mat-expansion-panel-header>
-
-<mat-list role="list">
-  <mat-list-item role="listitem">  <div mat-line>Storage Queues</div></mat-list-item>
-  <mat-list-item role="listitem">Service Bus Queues</mat-list-item>
-  <mat-list-item role="listitem">Service Bus Topics</mat-list-item>
-</mat-list>
-
-  </mat-expansion-panel>
-  <mat-expansion-panel disabled>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Destination
-      </mat-panel-title>
-      <mat-panel-description>
-        Type the country name
-        <mat-icon>map</mat-icon>
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-
-    <mat-form-field>
-      <mat-label>Country</mat-label>
-      <input matInput>
-    </mat-form-field>
-  </mat-expansion-panel>
-
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Day of the trip
-      </mat-panel-title>
-      <mat-panel-description>
-        Inform the date you wish to travel
-        <mat-icon>date_range</mat-icon>
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-
-    <mat-form-field>
-      <mat-label>Date</mat-label>
-      <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly>
-    </mat-form-field>
-    <mat-datepicker #picker></mat-datepicker>
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let service of panel.services" class="example-mat-list-item">
+        <div mat-line >
+          <a (click)="openDialog(service)">
+          <img src="{{ service.image }}" class="example-item-image" />
+          <strong> {{ service.title }} </strong>- {{ service.description }}
+          </a>
+        </div>
+      </mat-list-item>
+    </mat-list>
   </mat-expansion-panel>
 </mat-accordion>
