@@ -1,11 +1,12 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { DemoMaterialModule } from './mat-module';
 import { AzureServicesComponent } from './components/azure-services/azure-services.component';
 import { ServiceDetailComponent } from './components/service-detail-dialog/service-detail.component';
+import { DemoMaterialModule } from './mat-module';
 
 @NgModule({
   declarations: [AppComponent, ServiceDetailComponent, AzureServicesComponent],
@@ -14,6 +15,7 @@ import { ServiceDetailComponent } from './components/service-detail-dialog/servi
     BrowserAnimationsModule,
     DemoMaterialModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   entryComponents: [ServiceDetailComponent],

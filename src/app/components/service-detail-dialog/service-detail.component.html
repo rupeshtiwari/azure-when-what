@@ -1,15 +1,12 @@
 <h1 mat-dialog-title>{{data.title }}</h1>
-<div>
-  <img src="{{ data.image }}" alt="Azure Service image">
-</div>
 <div mat-dialog-content>
-  <p>{{data.content }}
-    <mat-chip-list aria-label="Color selection">
-      <mat-chip *ngFor="let chip of data.tags" color="accent" class="chip">
-        {{chip}}
-      </mat-chip>
-    </mat-chip-list>
-  </p>
+  <div [innerHtml]="data.content"></div>
+  <mat-chip-list aria-label="Color selection">
+    <mat-chip *ngFor="let chip of data.tags" color="accent" class="chip">
+      {{chip}}
+    </mat-chip>
+  </mat-chip-list>
+
 </div>
 <div mat-dialog-actions>
   <button mat-raised-button (click)="ok()">Ok</button>
