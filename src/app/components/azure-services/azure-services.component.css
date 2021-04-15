@@ -1,0 +1,10 @@
+.example-item-image{
+  height: 50px;
+  width: 50px;
+}
+
+.example-mat-list-item{
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding:30px;
+}

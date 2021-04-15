@@ -1,0 +1,27 @@
+<div class="example-action-buttons">
+  <button mat-button (click)="accordion.openAll()">Expand All</button>
+  <button mat-button (click)="accordion.closeAll()">Collapse All</button>
+</div>
+<mat-accordion class="example-headers-align" multi>
+  <mat-expansion-panel *ngFor="let panel of panels">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ panel.title }}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{ panel.description }}
+        <mat-icon>{{ panel.icon }}</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let service of panel.services" class="example-mat-list-item">
+        <div mat-line>
+          <a (click)="openDialog(service)">
+            <img src="{{ service.image }}" class="example-item-image" />
+            <strong> {{ service.title }} </strong>- {{ service.description }}
+          </a>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-expansion-panel>
+</mat-accordion>

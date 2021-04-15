@@ -1,9 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { MatAccordion } from '@angular/material/expansion';
-import { AzureService } from './models/dialog-data';
-import { AzureServices } from './models/panel-data';
-import { ServiceDetailComponent } from './service-detail/service-detail.component';
+import { Component } from '@angular/core';
+import { AzureItemsService } from './services/azure-items.service';
 
 @Component({
   selector: 'app-root',
@@ -11,15 +7,9 @@ import { ServiceDetailComponent } from './service-detail/service-detail.componen
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  @ViewChild(MatAccordion) accordion: MatAccordion;
-  panels = AzureServices;
-  constructor(public dialog: MatDialog) {}
+  constructor(public service: AzureItemsService) {}
 
-  openDialog(service: AzureService): void {
-    this.dialog.open(ServiceDetailComponent, {
-      width: '250px',
-      data: service,
-      disableClose:false,
-    });
+  get panels(): any {
+    return this.service.all;
   }
 }

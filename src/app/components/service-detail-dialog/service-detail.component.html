@@ -1,0 +1,14 @@
+
+
+<h1 mat-dialog-title>{{data.title  }}</h1>
+<div>
+    <img src="{{ data.image }}" alt="Azure Service image">
+</div>
+<div mat-dialog-content>
+  <p>{{data.description  }}</p>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="ok()">Ok</button>
+
+</div>

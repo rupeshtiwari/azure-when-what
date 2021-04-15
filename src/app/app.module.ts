@@ -4,14 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { DemoMaterialModule } from './mat-module';
-import { ServiceDetailComponent } from './service-detail/service-detail.component';
-import { AzureServicesComponent } from './azure-services/azure-services.component';
+import { AzureServicesComponent } from './components/azure-services/azure-services.component';
+import { ServiceDetailComponent } from './components/service-detail-dialog/service-detail.component';
 
 @NgModule({
-  declarations: [		AppComponent,
-      ServiceDetailComponent,
-      AzureServicesComponent
-   ],
+  declarations: [AppComponent, ServiceDetailComponent, AzureServicesComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -19,7 +16,7 @@ import { AzureServicesComponent } from './azure-services/azure-services.componen
     FormsModule,
   ],
   providers: [],
-  entryComponents:[ServiceDetailComponent],
+  entryComponents: [ServiceDetailComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
