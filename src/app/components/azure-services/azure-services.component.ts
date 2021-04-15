@@ -18,7 +18,8 @@ export class AzureServicesComponent {
 
   openDialog(service: AzureService): void {
     this.dialog.open(ServiceDetailComponent, {
-      width: '250px',
+      width: '600px',
+      height: '600px',
       data: service,
       disableClose: false,
     });
