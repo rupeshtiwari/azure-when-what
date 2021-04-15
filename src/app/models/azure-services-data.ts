@@ -9,7 +9,8 @@ export const AzureServices = [
         image: 'https://imgur.com/sugyXgH.png',
         description: 'multiple sender and single receiver',
         tags: ['Command'],
-        content: 'Use this if you need simple queueing mechanism. Sender and receiver are decuoupled. Each mesage is processed by one receiver only. However, many sender can put the message on queue. Message must be string. The Maximum size of message 64KB. Azure Storage will provide the transaction logs for each message. All of the Azure Storage features will be available here.',
+        content:
+          'Use this if you need simple queueing mechanism. Sender and receiver are decuoupled. Each mesage is processed by one receiver only. However, many sender can put the message on queue. Message must be string. The Maximum size of message 64KB. Azure Storage will provide the transaction logs for each message. All of the Azure Storage features will be available here.',
       },
       {
         title: 'Azure Service Bus Queues',
@@ -17,6 +18,8 @@ export const AzureServices = [
         description:
           'multiple sender and single receiver, order is guarrenty, de-duplicate of messages taken care',
         tags: ['Command'],
+        content:
+          'Use this as advance queueing mechanism. One ore more applications can put the message on the queue but still only one application can recive the message from queue. Message consists key/value properties. Like customer="Microsoft" and id="23". Message contains body that is binary so it can contain any data like image, json, text. Message size 256KB -1MB. Dead-letter sub-queue is there where timed-out or poisoned messages can be placed. It gives duplicate message detection feature out of the box.',
       },
       {
         title: 'Azure Service Bus Topics',
