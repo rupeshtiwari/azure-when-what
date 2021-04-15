@@ -1,19 +1,58 @@
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-</mat-card>
+<div class="example-action-buttons">
+  <button mat-button (click)="accordion.openAll()">Expand All</button>
+  <button mat-button (click)="accordion.closeAll()">Collapse All</button>
+</div>
+<mat-accordion class="example-headers-align" multi>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Events
+      </mat-panel-title>
+      <mat-panel-description>
+        Azure services for Event supports
+        <mat-icon>event</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+<mat-list role="list">
+  <mat-list-item role="listitem">  <div mat-line>Storage Queues</div></mat-list-item>
+  <mat-list-item role="listitem">Service Bus Queues</mat-list-item>
+  <mat-list-item role="listitem">Service Bus Topics</mat-list-item>
+</mat-list>
+
+  </mat-expansion-panel>
+  <mat-expansion-panel disabled>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Destination
+      </mat-panel-title>
+      <mat-panel-description>
+        Type the country name
+        <mat-icon>map</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <mat-label>Country</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Day of the trip
+      </mat-panel-title>
+      <mat-panel-description>
+        Inform the date you wish to travel
+        <mat-icon>date_range</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <mat-label>Date</mat-label>
+      <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly>
+    </mat-form-field>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-expansion-panel>
+</mat-accordion>
